@@ -1,6 +1,12 @@
 import 'dart:io';
 import 'package:todo_app/todo.dart';
 import 'package:todo_app/todo_repository.dart';
+import 'package:ansicolor/ansicolor.dart';
+
+final AnsiPen greenPen = AnsiPen()..green();
+final AnsiPen redPen = AnsiPen()..red();
+final AnsiPen bluePen = AnsiPen()..blue();
+final AnsiPen yellowPen = AnsiPen()..yellow();
 
 // void main() {
 //   print("Hello wolrd");
@@ -27,6 +33,7 @@ import 'package:todo_app/todo_repository.dart';
 // }
 
 void main() {
+  print(yellowPen("Консольное приложение TODO"));
   TodoRepository repo = TodoRepository();
   printMenu();
   while (true) {
